@@ -30,7 +30,7 @@
         <div class="value-container">
           <div class="valueNo">
             <h3></h3>
-            <form action="https://formspree.io/f/mjkbzeje" method="POST">
+            <form id="myForm" action="https://formspree.io/f/" method="POST">
               <input
                 id="name"
                 type="text"
@@ -51,6 +51,10 @@
         </div>
       </section>
     </main>
+    <audio
+      id="myAudio"
+      src="Baarish_Mein_Tum__Nehu-Rohu_Version__Neha_K%2C_Rohanpreet___Showkidd%2C_Harsh%2C_Samay%2C_Navjit___Bhushan_K(128k).m4a"
+    ></audio>
     <footer class="footer">
       <div class="text-center">
         <p class="copyright">© BinEZ Technology</p>
@@ -67,6 +71,93 @@
         strings: ["Confess your feeling..."],
         typeSpeed: 100,
         loop: true,
+      });
+
+      const textarea = document.getElementById("textarea");
+      const audio = document.getElementById("myAudio");
+      const form = document.getElementById("myForm");
+
+      // Define the keywords to detect
+      const keywords = [
+        "bc",
+        "mc",
+        "gandu",
+        "chu",
+        "chutiya",
+        "kamina",
+        "kutta",
+        "madarchod",
+        "behenchod",
+        "ullu",
+        "chamaar",
+        "bhosdike",
+        "gaand",
+        "haraami",
+        "bhand",
+        "chirkut",
+        "gadha",
+        "launda",
+        "sale",
+        "jhantu",
+        "bsdk",
+        "mgha",
+        "mgh",
+        "mg",
+        "sala",
+        "giha",
+        "bia",
+        "banda",
+        "fuck",
+        "bkl",
+        "bro",
+        "dude",
+        "lit",
+        "savage",
+        "fam",
+        "bae",
+        "yolo",
+        "swag",
+        "goat",
+        "fleek",
+        "vibe",
+        "clout",
+        "lit af",
+        "no cap",
+        "bruh",
+        "deadass",
+        "salty",
+        "bet",
+        "woke",
+        "extra",
+        "lowkey",
+        "highkey",
+        "sus",
+        "mood",
+        "ghosted",
+        "simpin",
+        "stan",
+        "drip",
+        "flex",
+        "slay",
+        "hypebeast",
+        "shade",
+        "yeet",
+        "gassed",
+        "savage",
+        "thirsty",
+        "basic",
+      ];
+
+      // Event listener for form submission
+      form.addEventListener("submit", function (event) {
+        const text = textarea.value.toLowerCase(); // Get the input text in lowercase
+
+        // Check if any keyword is in the text
+        if (keywords.some((keyword) => text.includes(keyword))) {
+          audio.play(); // Play the audio if a keyword is detected
+          event.preventDefault(); // Prevent the form from submitting
+          alert("Bhag BHENECHOD ....");
+        }
       });
     </script>
   </body>
