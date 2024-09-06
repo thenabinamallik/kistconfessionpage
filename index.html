@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Falcon</title>
+    <link rel="icon" href="logo.webp" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-left">
+          <img src="kist logo.png" class="logo" alt="Logo" />
+          <div class="name">KIST WarLoads</div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="firstSection">
+        <div class="rounded-description">
+          <span id="element"></span>
+        </div>
+        <div class="value-container">
+          <div class="valueNo">
+            <h3></h3>
+            <form action="https://formspree.io/f/mjkbzeje" method="POST">
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+              <textarea
+                id="textarea"
+                name="confession"
+                rows="5"
+                placeholder="Write your confession here..."
+                required
+              ></textarea>
+              <button type="submit" id="button">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="text-center">
+        <p class="copyright">© BinEZ Technology</p>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["KIST Confession Page"],
+        typeSpeed: 50,
+      });
+
+      var typed2 = new Typed("h3", {
+        strings: ["Confess your feeling..."],
+        typeSpeed: 100,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
