@@ -62,7 +62,7 @@ nav ul li a:hover {
     /* Adjust spacing between logo and text */
 }
 
-.name {
+.year {
     font-size: 1.2rem;
 }
 
@@ -156,7 +156,7 @@ main hr {
     
 }
 
-#name{
+#year{
     height: 40px;
     width: 200px;
     color: #fff;
